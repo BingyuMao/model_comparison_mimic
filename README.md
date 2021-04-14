@@ -24,20 +24,6 @@ MIMIC III with ADMISSIONS, DIAGNOSES_ICD, ICUSTAYS, PATIENTS, PRESCRIPTIONS and 
 I'll not provide the MIMIC III data itself, you need to acquire the data yourself from https://mimic.physionet.org/.
 
 
-### The final deliverables:
-
-- Plots for MIMIC III dataset descriptive analysis. ([DescriptiveAnalysis.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/DescriptiveAnalysis.ipynb))
-
-- AUROC scores and plots for different models on in hospital mortality prediction based on (1) diagnosis and prescriptions, (2) diagnosis, prescriptions and demographics.
-
-- Concordance index and survival analysis plots for different models on survival analysis based on (1) diagnosis and prescriptions, (2) diagnosis, prescriptions and demographics.
-
-
-### The metrics used to evaluate the data analysis:
-
-AUROC (for in hospital mortality) and Concordance index (for survival analysis).
-
-
 ## Steps to run this project
 
 You may choose to start from the Model part directly with data files after data pre-process, or you can also start from Data pre-process with the raw data.
