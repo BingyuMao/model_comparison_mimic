@@ -2,6 +2,7 @@
 
 ## Introduction
 
+This is the code repository for BMI 5311 paper in Spring 2021.
 
 ### The overarching goal of this research:
 
@@ -25,7 +26,7 @@ I'll not provide the MIMIC III data itself, you need to acquire the data yoursel
 
 ### The final deliverables:
 
-- Plots for MIMIC III dataset descriptive analysis.
+- Plots for MIMIC III dataset descriptive analysis. ([DescriptiveAnalysis.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/DescriptiveAnalysis.ipynb))
 
 - AUROC scores and plots for different models on in hospital mortality prediction based on (1) diagnosis and prescriptions, (2) diagnosis, prescriptions and demographics.
 
@@ -40,4 +41,20 @@ AUROC (for in hospital mortality) and Concordance index (for survival analysis).
 ## Steps to run this project
 
 You may choose to start from the Model part directly with data files after data pre-process, or you can also start from Data pre-process with the raw data.
+
+### Data pre-process
+
+1. The [DescriptiveAnalysis.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/DescriptiveAnalysis.ipynb) is the draft of descriptive analysis from the raw MIMIC III dataset.
+2. The [DataPreprocess.py](https://github.com/BingyuMao/model_comparison_mimic/blob/main/DataPreprocess.py) is the first part of data pre-process, it will output two types of csv file for in hospital mortality prediction and survival analysis: case&control files contain diagnosis, procedures and prescriptions; case&control files contain diagnosis, prescriptions, procedures and demographics. For each type we will have two files: one is case contains died patients' information and the other is contorl contains other patients' information.
+
+3. The [preprocessing.py](https://github.com/BingyuMao/model_comparison_mimic/blob/main/preprocessing.py) is the second part of data pre-process, it will output three types of files (train, valid and test) and in these files, we have a list of lists. Every list represents a patient and in this list, we will have his/her ID, other lists with different visits and for every time stamp we have diagnosis, prescription, etc.
+
+### Model
+
+1. For in hospital mortality task, you can run [Mortality_dp.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/Mortality_dp.ipynb) which contains the three models for in hospital mortality prediction with diagnoses, procedures & prescriptions information; [Mortality_dpd.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/Mortality_dpd.ipynb) which contains the three models with diagnoses, prescriptions, procedures & demographics information. The data used in these scripts can be found in the data floder.
+
+2. For in survival analysis task, you can run [Survival_dp.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/Survival_dp.ipynb) which contains the two models for isurvival analysis with diagnoses, procedures & prescriptions information; [Survival_dpd.ipynb](https://github.com/BingyuMao/model_comparison_mimic/blob/main/Survival_dpd.ipynb) which contains the two models with diagnoses, prescriptions, procedures & demographics information. The data used in these scripts can be found in the data floder.
+
+3. The script [model.py](https://github.com/BingyuMao/model_comparison_mimic/blob/main/model.py) contains all the required functions for RNN model.
+
 
