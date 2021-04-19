@@ -10,7 +10,7 @@
 # For each type we will have two files: one is case contains died patients' information and 
 # the other is contorl contains other patients' information.
 
-# Note that we will focus our data analysis on the encounter level, so we will use HADM_ID to identify 
+# Note that this project focuses on the encounter level, so we will use HADM_ID to identify 
 # every patient's admissions. Since our focus is on mortality, we will use the last ICU admission of every patient.
 '''
 
