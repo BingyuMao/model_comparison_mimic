@@ -130,7 +130,7 @@ if __name__ == '__main__':
                       for code in visit:
                                     if code in types: newVisit_c.append(types[code])
                                     else:                             
-                                          types[code] = max(types.values())+1
+                                          types[code] = len(types)+1
                                           newVisit_c.append(types[code])
                       newPatient_c.append(newVisit_c)
 
