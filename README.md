@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the code repository for BMI 5311 course paper in Spring 2021.
+This is the code repository for BMI 6319 course project in Spring 2021.
 
 ### The overarching goal of this research:
 
